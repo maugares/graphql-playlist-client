@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class BookList extends Component {
   render() {
@@ -10,4 +10,4 @@ export default class BookList extends Component {
       </div>
     )
   }
-}
+};
