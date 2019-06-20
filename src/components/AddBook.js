@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function AddBook(props) {
-  console.log(props.author)
   return (
     <form>
 

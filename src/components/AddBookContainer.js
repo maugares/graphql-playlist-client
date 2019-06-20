@@ -1,17 +1,7 @@
 import React, { Component } from 'react'
-import { gql } from 'apollo-boost'
 import { graphql } from 'react-apollo'
 import AddBook from './AddBook';
-
-// GraphQL query to get the author of a book
-const getAuthorQuery = gql`
-  {
-    authors {
-      name
-      id
-    }
-  }
-`
+import { getAuthorQuery } from '../queries/queries'
 
 // React component
 class AddBookContainer extends Component {
@@ -32,7 +22,7 @@ class AddBookContainer extends Component {
   render() {
     return (
       <div>
-        <AddBook author={this.renderAuthors()}/>
+        <AddBook author={this.renderAuthors()} />
       </div>
     )
   }
