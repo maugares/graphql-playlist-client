@@ -30,13 +30,23 @@ class AddBookContainer extends Component {
     })
   }
 
-  render() {
+  onSubmit = (event) => {
+    event.preventDefault()
+    this.setState({
+      name: this.state.name,
+      genre: this.state.genre,
+      authorId: this.state.authorId
+    })
     console.log(this.state)
+  }
+
+  render() {
     return (
       <div>
         <AddBook
           author={this.renderAuthors()}
           onChange={this.onChange}
+          onSubmit={this.onSubmit}
         />
       </div>
     )

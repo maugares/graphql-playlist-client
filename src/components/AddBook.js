@@ -1,9 +1,8 @@
 import React from 'react'
 
 export default function AddBook(props) {
-  console.log(props)
   return (
-    <form>
+    <form id="add-book" onSubmit={props.onSubmit}>
 
       <div className="field">
         <label>Book Name</label>
