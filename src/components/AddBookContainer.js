@@ -5,6 +5,11 @@ import { getAuthorQuery } from '../queries/queries'
 
 // React component
 class AddBookContainer extends Component {
+  state = {
+    name: "",
+    genre: "",
+    authorId: ""
+  }
 
   renderAuthors() {
     const data = this.props.data
@@ -19,10 +24,20 @@ class AddBookContainer extends Component {
       })
   }
 
+  onChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
+    console.log(this.state)
     return (
       <div>
-        <AddBook author={this.renderAuthors()} />
+        <AddBook
+          author={this.renderAuthors()}
+          onChange={this.onChange}
+        />
       </div>
     )
   }
