@@ -31,7 +31,7 @@ const addBookMutation = gql`
 
 // Define the graphql query to get a specific book
 const getBookQuery= gql`
-  query($id: String!){
+  query($id: ID!){
     book(id: $id){
       id
       name
