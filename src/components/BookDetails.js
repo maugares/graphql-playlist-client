@@ -6,6 +6,7 @@ import { getBookQuery } from '../queries/queries'
 class BookDetails extends Component {
 
   render() {
+    cl
     return (
       <div id="book-details">
         <p>Output book details here</p>       
@@ -14,4 +15,4 @@ class BookDetails extends Component {
   }
 }
 
-export default graphql(getBookQuery)(BookList)
+export default graphql(getBookQuery)(BookDetails)
