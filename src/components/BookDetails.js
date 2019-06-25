@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
-// import { getBooksQuery } from '../queries/queries'
+import { getBookQuery } from '../queries/queries'
 
 // React component
 class BookDetails extends Component {
@@ -14,4 +14,4 @@ class BookDetails extends Component {
   }
 }
 
-export default graphql(getBooksQuery)(BookList)
+export default graphql(getBookQuery)(BookList)
