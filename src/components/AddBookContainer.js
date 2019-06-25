@@ -12,7 +12,7 @@ class AddBookContainer extends Component {
   }
 
   renderAuthors() {
-    const data = this.props.data
+    const data = this.props.getAuthorsQuery
     return data.loading
       ? "Loading books..."
       : data.authors.map(author => {
@@ -37,10 +37,17 @@ class AddBookContainer extends Component {
       genre: this.state.genre,
       authorId: this.state.authorId
     })
-    console.log(this.state)
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorId: this.state.authorId
+      }
+    })
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <AddBook
@@ -54,6 +61,6 @@ class AddBookContainer extends Component {
 }
 
 export default compose(
-  graphql(getAuthorsQuery, {name: "getAuthorsQuery"}),
-  graphql(addBookMutation, {name: "addBookMutation"}),
+  graphql(getAuthorsQuery, { name: "getAuthorsQuery" }),
+  graphql(addBookMutation, { name: "addBookMutation" }),
 )(AddBookContainer)
