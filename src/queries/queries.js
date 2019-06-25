@@ -1,5 +1,5 @@
 import { gql } from 'apollo-boost'
- 
+
 // Define the graphql query to getting all the books
 const getBooksQuery = gql`
   {
@@ -19,4 +19,17 @@ const getAuthorQuery = gql`
   }
 `
 
-export { getBooksQuery, getAuthorQuery }
+// 
+const addBookMutation = gql`
+  mutation {
+    addBook(
+      name:"",
+      genre:"",
+      authorId:""
+      )
+      name
+      id    
+  }
+`
+
+export { getBooksQuery, getAuthorQuery, addBookMutation }
