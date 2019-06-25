@@ -49,4 +49,4 @@ const getBookQuery= gql`
   }
 `
 
-export { getBooksQuery, getAuthorsQuery, addBookMutation }
+export { getBooksQuery, getAuthorsQuery, addBookMutation, getBookQuery }

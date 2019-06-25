@@ -6,7 +6,6 @@ import { getBookQuery } from '../queries/queries'
 class BookDetails extends Component {
 
   render() {
-    cl
     return (
       <div id="book-details">
         <p>Output book details here</p>       
