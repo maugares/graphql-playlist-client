@@ -19,7 +19,7 @@ const getAuthorsQuery = gql`
   }
 `
 
-// 
+// Mutation request to add a book to the database
 const addBookMutation = gql`
   mutation ($name: String!, $genre: String!, $authorId:ID!) {
     addBook(name: $name, genre: $genre, authorId: $authorId){
