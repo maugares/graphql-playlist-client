@@ -3,13 +3,12 @@ import { graphql } from 'react-apollo'
 import { getBookQuery } from '../queries/queries'
 
 // React component
-class BookDetails extends Component {
+class BookDetailsContainer extends Component {
 
   render() {
-    console.log(this.props)   
     return (
       <div id="book-details">
-        <p>Output book details here</p>       
+        <p>Output book details here</p>
       </div>
     )
   }
