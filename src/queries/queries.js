@@ -9,6 +9,7 @@ const getBooksQuery = gql`
     }
   }
 `
+
 // GraphQL query to get the author of a book
 const getAuthorsQuery = gql`
   {
@@ -24,6 +25,26 @@ const addBookMutation = gql`
   mutation ($name: String!, $genre: String!, $authorId:ID!) {
     addBook(name: $name, genre: $genre, authorId: $authorId){
       id
+    }
+  }
+`
+
+// Define the graphql query to get a specific book
+const getBookQuery= gql`
+  query($id: String!){
+    book(id: $id){
+      id
+      name
+      genre
+      author{
+        id
+        name
+        age
+        books{
+          name
+          id
+        }
+      }
     }
   }
 `
