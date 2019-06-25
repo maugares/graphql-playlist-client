@@ -10,7 +10,7 @@ const getBooksQuery = gql`
   }
 `
 // GraphQL query to get the author of a book
-const getAuthorQuery = gql`
+const getAuthorsQuery = gql`
   {
     authors {
       name
@@ -32,4 +32,4 @@ const addBookMutation = gql`
   }
 `
 
-export { getBooksQuery, getAuthorQuery, addBookMutation }
+export { getBooksQuery, getAuthorsQuery, addBookMutation }

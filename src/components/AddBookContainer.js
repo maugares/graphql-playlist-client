@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import AddBook from './AddBook';
-import { getAuthorQuery } from '../queries/queries'
+import { getAuthorsQuery } from '../queries/queries'
 
 // React component
 class AddBookContainer extends Component {
@@ -53,4 +53,4 @@ class AddBookContainer extends Component {
   }
 }
 
-export default graphql(getAuthorQuery)(AddBookContainer)
+export default graphql(getAuthorsQuery)(AddBookContainer)
