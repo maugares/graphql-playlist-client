@@ -5,14 +5,17 @@ import BookDetails from './BookDetails';
 
 // React component
 class BookList extends Component {
+  state = {
+    selected: null
+  }
 
-  renderBooks() {
+  renderBooks = () => {
     const data = this.props.data
     return data.loading
       ? <div>Loading books...</div>
       : data.books.map(book => {
         return (
-          <li key={book.id}>{book.name}</li>
+          <li key={book.id} onClick={(e) => this.setState({ selected: book.id })}>{book.name}</li>
         )
       })
   }
@@ -23,7 +26,7 @@ class BookList extends Component {
         <ul id="book-list">
           {this.renderBooks()}
         </ul>
-        <BookDetails />
+        <BookDetails bookId={this.state.selected} />
       </div>
     )
   }
